@@ -64,3 +64,9 @@ $ ./colorizer.sh --wal --xfwm diamondo
 ![xfwm nest1](Screenshots/light-nest1.png)
 ![xfwm wendows](Screenshots/light-wendows.png)
 
+## Credits
+- inspired by obtgen by [Fikri Omar](https://github.com/fikriomar16/obtgen/)
+- xfwm theme from [Faat Fuut](https://github.com/Nztux/fuut-xfwm.xfce-theme-Collections)
+- fantome gtk theme from [Adhi Pambudi](https://github.com/addy-dclxvi/gtk-theme-collections/)
+- diamondo xfwm theme inspired by [Circela xfwm theme ](https://github.com/addy-dclxvi/xfwm4-theme-collections)
+- xfwm theme from [Wotalim](https://github.com/wotalim/sora-aoi)
