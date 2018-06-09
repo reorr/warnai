@@ -1,4 +1,4 @@
-file=$HOME/.cache/wal/colors.Xresources
+file=$HOME/.Xresources
 dir=$HOME/.themes/colorizer/
 pwd=/usr/bin/pwd
 
@@ -58,6 +58,7 @@ apply_theme(){
 }
 
 main_wal(){
+	file=$HOME/.cache/wal/colors.Xresources
 	fill_color
 	if [[ $wal && $xfwm && $gtk ]]; then
 		echo "Generating xfwm4 theme"
@@ -70,6 +71,29 @@ main_wal(){
 		"$dir"gtk-3.0/render-assets.sh;
 		apply_theme
 	elif [[ $wal && $xfwm ]]; then
+		echo "Generating xfwm4 theme"
+		$(xfwm_themer $xfwm)
+		apply_theme
+	else
+		show_help
+	fi
+	
+	#$(openbox_themer $openbox)
+}
+
+main(){
+	fill_color
+	if [[ $xfwm && $gtk ]]; then
+		echo "Generating xfwm4 theme"
+		$(xfwm_themer $xfwm)
+		echo "Generating gtk theme"
+		$(gtk_themer $gtk)
+		cd "$dir"gtk-2.0/
+		"$dir"gtk-2.0/render-assets.sh;
+		cd "$dir"gtk-3.0/
+		"$dir"gtk-3.0/render-assets.sh;
+		apply_theme
+	elif [[ $xfwm ]]; then
 		echo "Generating xfwm4 theme"
 		$(xfwm_themer $xfwm)
 		apply_theme
@@ -106,5 +130,5 @@ if [[ $help == 1 ]]; then
 elif [[ $wal == 1 ]]; then
 	main_wal
 else
-	show_help
+	main
 fi
