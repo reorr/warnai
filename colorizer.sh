@@ -119,7 +119,7 @@ show_help(){
 	Avaible options
 	--wal       Generate color from pywal cache
 	--gtk       Choose gtk theme from list [ fantome-colorize ]
-	--xfwm      Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows ]
+	--xfwm      Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris ]
 	--help      Show help
 
 	EOF
