@@ -155,7 +155,7 @@ entry {
     box-shadow: inset 1px 0 #color_2, inset -1px 0 #color_2, inset 0 1px #color_2, inset 0 -1px #color_2; }
   entry:disabled {
     color: rgba(211, 218, 227, 0.45);
-    border-color: rgba(12,12, 22, 0.55);
+    border-color: #color_bg;
     background-color: rgba(64, 69, 82, 0.55); }
   entry.warning {
     color: white;
@@ -283,7 +283,7 @@ button {
     background-color: transparent;
     background-image: none; }
   button:disabled {
-    border-color: rgba(12,12, 22, 0.55);
+    border-color: #color_bg;
     background-color: rgba(68, 74, 88, 0.55); }
     button:disabled label, button:disabled {
       color: rgba(211, 218, 227, 0.45); }
@@ -401,7 +401,7 @@ button {
       background-image: none;
       color: rgba(211, 218, 227, 0.45); }
     button.suggested-action:disabled {
-      border-color: rgba(12,12, 22, 0.55);
+      border-color: #color_bg;
       background-color: rgba(68, 74, 88, 0.55); }
       button.suggested-action:disabled label, button.suggested-action:disabled {
         color: rgba(211, 218, 227, 0.45); }
@@ -431,7 +431,7 @@ button {
       background-image: none;
       color: rgba(211, 218, 227, 0.45); }
     button.destructive-action:disabled {
-      border-color: rgba(12,12, 22, 0.55);
+      border-color: #color_bg;
       background-color: rgba(68, 74, 88, 0.55); }
       button.destructive-action:disabled label, button.destructive-action:disabled {
         color: rgba(211, 218, 227, 0.45); }
@@ -481,7 +481,7 @@ button {
     border-color: #color_bg;
     background-color: #color_2; }
   .inline-toolbar toolbutton > button:disabled {
-    border-color: rgba(12,12, 22, 0.55);
+    border-color: #color_bg;
     background-color: rgba(68, 74, 88, 0.55); }
     .inline-toolbar toolbutton > button:disabled label, .inline-toolbar toolbutton > button:disabled {
       color: rgba(211, 218, 227, 0.45); }
@@ -493,19 +493,19 @@ button {
       color: rgba(255, 255, 255, 0.8); }
 
 .linked:not(.vertical):not(.path-bar) > entry + entry {
-  border-left-color: rgba(12,12, 22, 0.3); }
+  border-left-color: #color_bg; }
 
 .linked:not(.vertical):not(.path-bar) > entry.error + entry,
 .linked:not(.vertical):not(.path-bar) > entry + entry.error {
-  border-left-color: rgba(12,12, 22, 0.3); }
+  border-left-color: #color_bg; }
 
 .linked:not(.vertical):not(.path-bar) > entry.warning + entry,
 .linked:not(.vertical):not(.path-bar) > entry + entry.warning {
-  border-left-color: rgba(12,12, 22, 0.3); }
+  border-left-color: #color_bg; }
 
 .linked:not(.vertical):not(.path-bar) > entry.error + entry.warning,
 .linked:not(.vertical):not(.path-bar) > entry.warning + entry.error {
-  border-left-color: rgba(12,12, 22, 0.3); }
+  border-left-color: #color_bg; }
 
 .linked:not(.vertical):not(.path-bar) > entry + entry:focus:not(:last-child),
 .linked:not(.vertical):not(.path-bar) > entry + entry:focus:last-child {
@@ -556,7 +556,7 @@ button {
 
 .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled:not(:only-child),
 .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):not(:hover) {
-  box-shadow: inset 1px 0 rgba(12,12, 22, 0.5); }
+  box-shadow: inset 1px 0 #color_bg; }
 
 .linked:not(.vertical):not(.path-bar) > button:active + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
 .linked:not(.vertical):not(.path-bar) > button:checked + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
@@ -577,28 +577,28 @@ button {
   border-left-style: none; }
 
 .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):hover {
-  box-shadow: inset 1px 0 rgba(12,12, 22, 0.5), inset -1px 0 rgba(12,12, 22, 0.5); }
+  box-shadow: inset 1px 0 #color_bg, inset -1px 0 #color_bg; }
 
 .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):first-child:hover {
-  box-shadow: inset -1px 0 rgba(12,12, 22, 0.5); }
+  box-shadow: inset -1px 0 #color_bg; }
 
 .linked:not(.vertical).path-bar > button:hover:not(:checked):not(:active):not(:only-child):last-child:hover {
-  box-shadow: inset 1px 0 rgba(12,12, 22, 0.5); }
+  box-shadow: inset 1px 0 #color_bg; }
 
 .linked.vertical > entry + entry {
-  border-top-color: rgba(12,12, 22, 0.3); }
+  border-top-color: #color_bg; }
 
 .linked.vertical > entry.error + entry,
 .linked.vertical > entry + entry.error {
-  border-top-color: rgba(12,12, 22, 0.3); }
+  border-top-color: #color_bg; }
 
 .linked.vertical > entry.warning + entry,
 .linked.vertical > entry + entry.warning {
-  border-top-color: rgba(12,12, 22, 0.3); }
+  border-top-color: #color_bg; }
 
 .linked.vertical > entry.error + entry.warning,
 .linked.vertical > entry.warning + entry.error {
-  border-top-color: rgba(12,12, 22, 0.3); }
+  border-top-color: #color_bg; }
 
 .linked.vertical > entry + entry:focus:not(:last-child),
 .linked.vertical > entry + entry:focus:last-child {
@@ -649,7 +649,7 @@ button {
 
 .linked.vertical > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled:not(:only-child),
 .linked.vertical > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):disabled + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):not(:hover) {
-  box-shadow: inset 0 1px rgba(12,12, 22, 0.5); }
+  box-shadow: inset 0 1px #color_bg; }
 
 .linked.vertical > button:active + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
 .linked.vertical > button:checked + button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):hover,
@@ -794,7 +794,7 @@ spinbutton:not(.vertical) > button:hover + button {
 
 spinbutton:not(.vertical) > button:disabled + button:not(:disabled):not(:active):not(:checked):not(:hover),
 spinbutton:not(.vertical) > button:not(:disabled):not(:active):not(:checked):not(:hover) + button:disabled {
-  box-shadow: inset 1px 0 rgba(12,12, 22, 0.5); }
+  box-shadow: inset 1px 0 #color_bg; }
 
 spinbutton:not(.vertical) > button:first-child:hover:not(:active),
 spinbutton:not(.vertical) > button.up:dir(rtl):hover:not(:active),
@@ -915,14 +915,14 @@ headerbar,
   padding: 0 7px;
   border-width: 0 0 1px;
   border-style: solid;
-  border-color: #262a33;
+  border-color: #color_bg;
   color: rgba(207, 218, 231, 0.8);
   background-color: #color_bg;
-  box-shadow: inset 0 1px rgba(54, 59, 72, 0.97); }
+  box-shadow: inset 0 1px #color_bg; }
   .csd headerbar,
   .csd .titlebar:not(headerbar) {
     background-color: rgba(12, 15, 22, 0.97);
-    border-color: rgba(38, 42, 51, 0.97); }
+    border-color: #color_bg; }
   headerbar:backdrop,
   .titlebar:backdrop:not(headerbar) {
     transition: 200ms ease-out;
@@ -969,7 +969,7 @@ headerbar,
   .maximized headerbar,
   .maximized .titlebar:not(headerbar) {
     background-color: #color_bg;
-    border-color: #262a33; }
+    border-color: #color_bg; }
     .maximized headerbar:backdrop,
     .maximized .titlebar:backdrop:not(headerbar) {
       background-color: #color_bg; }
@@ -1027,7 +1027,7 @@ window.csd > .titlebar:not(headerbar):backdrop {
   box-shadow: none; }
 
 .titlebar:not(headerbar) > separator {
-  background-image: linear-gradient(to bottom, rgba(38, 42, 51, 0.97), rgba(38, 42, 51, 0.97)); }
+  background-image: linear-gradient(to bottom, #color_bg, #color_bg); }
 
 .primary-toolbar:not(.libreoffice-toolbar) separator, headerbar separator.titlebutton, .titlebar:not(headerbar) separator.titlebutton {
   min-width: 1px;
@@ -2172,7 +2172,7 @@ scale {
       border-color: #color_2; }
     scale slider:disabled {
       background-color: #color_bg;
-      border-color: rgba(38, 41, 51, 0.8); }
+      border-color: #color_bg; }
     menuitem:hover scale slider,
     row:selected scale slider,
     infobar scale slider {
@@ -2547,7 +2547,7 @@ messagedialog.csd .dialog-action-area button:only-child {
   border-right-style: none; }
 
 filechooser #pathbarbox {
-  border-bottom: 1px solid rgba(12,12, 22, 0.5); }
+  border-bottom: 1px solid #color_bg; }
 
 filechooserbutton:drop(active) {
   box-shadow: none;
@@ -3014,7 +3014,7 @@ terminal-window notebook > header.top > tabs > tab:checked {
 terminal-window notebook > header.top,
 .mate-terminal notebook > header.top {
   padding-top: 3px;
-  box-shadow: inset 0 1px #262a33, inset 0 -1px #color_bg; }
+  box-shadow: inset 0 1px #color_bg, inset 0 -1px #color_bg; }
   terminal-window notebook > header.top button,
   .mate-terminal notebook > header.top button {
     padding: 0;
@@ -3501,7 +3501,7 @@ panel-toplevel.background .wnck-pager {
   background-color: rgba(20, 22, 27, 0.95); }
   .mate-panel-menu-bar .wnck-pager:hover,
   panel-toplevel.background .wnck-pager:hover {
-    background-color: rgba(54, 58, 70, 0.95); }
+    background-color: #color_bg; }
   .mate-panel-menu-bar .wnck-pager:selected,
   panel-toplevel.background .wnck-pager:selected {
     color: #81a1c1;
@@ -3513,7 +3513,7 @@ panel-toplevel.background na-tray-applet {
   -NaTrayApplet-icon-size: 16px; }
 
 .xfce4-panel.panel {
-  background-color: rgba(12,12, 22, 0.95);
+  background-color: #color_bg;
   text-shadow: none;
   -gtk-icon-shadow: none; }
 
@@ -3521,7 +3521,7 @@ panel-toplevel.background na-tray-applet {
   color: rgba(186, 195, 207, 0.8);
   border-radius: 0;
   border: none;
-  background-color: rgba(12,12, 22, 0); }
+  background-color: #color_bg; }
   #tasklist-button:hover {
     color: #d8dde4;
     background-color: rgba(0, 0, 0, 0.17); }
@@ -3535,7 +3535,7 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
   color: #BAC3CF;
   border-radius: 0;
   border: none;
-  background-color: rgba(12,12, 22, 0); }
+  background-color: #color_bg; }
   .mate-panel-menu-bar button:hover:not(#tasklist-button),
   panel-toplevel.background button:hover:not(#tasklist-button), .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover {
     border: none;
@@ -3665,7 +3665,7 @@ UnityDecoration {
     padding: 1px 6px 0 6px;
     background-image: linear-gradient(to bottom, #color_bg, #color_bg);
     color: rgba(207, 218, 231, 0.8);
-    box-shadow: inset 0 1px rgba(54, 59, 72, 0.97); }
+    box-shadow: inset 0 1px #color_bg; }
     UnityDecoration .top:backdrop {
       border-bottom-width: 0;
       color: rgba(207, 218, 231, 0.5); }
@@ -3932,7 +3932,7 @@ GtkListBox .h4 {
   padding-left: 6px; }
 
 #panel_window {
-  background-color: rgba(12,12, 22, 0.95);
+  background-color: #color_bg;
   color: #BAC3CF;
   font-weight: bold;
   box-shadow: inset 0 -1px rgba(27, 29, 35, 0.95); }
@@ -3978,7 +3978,7 @@ GtkListBox .h4 {
     border-color: #color_bg;
     background-color: #color_2; }
   #content_frame button:disabled {
-    border-color: rgba(12,12, 22, 0.55);
+    border-color: #color_bg;
     background-color: rgba(68, 74, 88, 0.55); }
     #content_frame button:disabled label, #content_frame button:disabled {
       color: rgba(211, 218, 227, 0.45); }
@@ -3992,7 +3992,7 @@ GtkListBox .h4 {
   border-bottom-right-radius: 3px;
   border: solid rgba(0, 0, 0, 0.1);
   border-width: 0 1px 1px 1px;
-  box-shadow: inset 0 1px rgba(38, 42, 51, 0.97); }
+  box-shadow: inset 0 1px #color_bg; }
 
 #buttonbox_frame button {
   color: #BAC3CF;
