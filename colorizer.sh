@@ -19,7 +19,11 @@ fill_color(){
 }
 
 xfwm_themer(){
-	rm "$dir"xfwm4/*
+	if [ ! -d "$dir"xfwm4/ ]; then
+	    mkdir -p "$dir"xfwm4/
+	else
+		rm "$dir"xfwm4/*
+	fi	
 	cp `$pwd`/xfwm4/$1/* "$dir"xfwm4/
 	sed -i s/"color_bg"/"${get_colors_bg}"/g "$dir"xfwm4/*
 	sed -i s/"color_1"/"$(get_colors 1)"/g "$dir"xfwm4/*
@@ -59,6 +63,7 @@ apply_theme(){
 
 main_wal(){
 	file=$HOME/.cache/wal/colors.Xresources
+	mkdir -p $HOME/.themes/colorizer
 	fill_color
 	if [[ $wal && $xfwm && $gtk ]]; then
 		echo "Generating xfwm4 theme"
@@ -82,6 +87,7 @@ main_wal(){
 }
 
 main(){
+	mkdir -p $HOME/.themes/colorizer
 	fill_color
 	if [[ $xfwm && $gtk ]]; then
 		echo "Generating xfwm4 theme"
@@ -118,7 +124,7 @@ show_help(){
 
 	Avaible options
 	--wal       Generate color from pywal cache
-	--gtk       Choose gtk theme from list [ fantome-colorize ]
+	--gtk       Choose gtk theme from list [ fantome ]
 	--xfwm      Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris ]
 	--help      Show help
 
