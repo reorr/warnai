@@ -44,25 +44,12 @@ or
 $ ./colorizer.sh --wal --xfwm diamondo
 </pre>
 
-## Gallery
-
-![Dark gtk 2](Screenshots/dark-gtk2.png)
-![Dark gtk 3](Screenshots/dark-gtk3.png)
-![xfwm diamondo](Screenshots/dark-diamondo.png)
-![xfwm pastel](Screenshots/dark-pastel.png)
-![xfwm black-paha](Screenshots/dark-black-paha.png)
-![xfwm new_one](Screenshots/dark-new_one.png)
-![xfwm nest1](Screenshots/dark-nest1.png)
-![xfwm wendows](Screenshots/dark-wendows.png)
-
-![Light gtk 2](Screenshots/light-gtk2.png)
-![Light gtk 3](Screenshots/light-gtk3.png)
-![xfwm diamondo](Screenshots/light-diamondo.png)
-![xfwm pastel](Screenshots/light-pastel.png)
-![xfwm black-paha](Screenshots/light-black-paha.png)
-![xfwm new_one](Screenshots/light-new_one.png)
-![xfwm nest1](Screenshots/light-nest1.png)
-![xfwm wendows](Screenshots/light-wendows.png)
+## Preview
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="preview/2018-06-14_06-43-02.jpg">
+    <source src="preview/2018-06-14_06-43-02.webm" type="video/webm">
+  </video>
+</figure>
 
 ## Credits
 - inspired by obtgen by [Fikri Omar](https://github.com/fikriomar16/obtgen/)

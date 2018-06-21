@@ -4259,6 +4259,13 @@ filechooser placessidebar.sidebar scrollbar,
   .nautilus-window placessidebar.sidebar scrollbar trough, .nemo-window .sidebar scrollbar trough, .caja-side-pane scrollbar trough {
     background-color: rgba(42, 45, 55, 0.95); }
 
+.-vala-panel-appmenu-private {
+    background-color: transparent;
+    background-image: none;
+    color: #color_7;
+    box-shadow: inset 0 0px;
+}
+
 @define-color theme_fg_color #color_7;
 @define-color theme_text_color #color_7;
 @define-color theme_bg_color #color_bg;
