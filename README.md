@@ -45,11 +45,7 @@ $ ./colorizer.sh --wal --xfwm diamondo
 </pre>
 
 ## Preview
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="preview/2018-06-14_06-43-02.jpg">
-    <source src="preview/2018-06-14_06-43-02.webm" type="video/webm">
-  </video>
-</figure>
+[![change xfwm on the fly](preview/2018-06-14_06-43-02.jpg)](preview/2018-06-14_06-43-02.webm)
 
 ## Credits
 - inspired by obtgen by [Fikri Omar](https://github.com/fikriomar16/obtgen/)
