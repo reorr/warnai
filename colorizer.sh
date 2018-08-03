@@ -56,9 +56,6 @@ apply_theme(){
 	xfconf-query -c xfwm4 -p /general/theme -s "colorizer"
 	xfconf-query -c xsettings -p /Net/ThemeName -s "adwaita"
 	xfconf-query -c xsettings -p /Net/ThemeName -s "colorizer"
-
-	echo Restarting panel
-	xfce4-panel -r  &> /dev/null
 }
 
 main_wal(){
@@ -75,6 +72,8 @@ main_wal(){
 		cd "$dir"gtk-3.0/
 		"$dir"gtk-3.0/render-assets.sh;
 		apply_theme
+		echo Restarting panel
+		xfce4-panel -r  &> /dev/null
 	elif [[ $wal && $xfwm ]]; then
 		echo "Generating xfwm4 theme"
 		$(xfwm_themer $xfwm)
@@ -99,6 +98,8 @@ main(){
 		cd "$dir"gtk-3.0/
 		"$dir"gtk-3.0/render-assets.sh;
 		apply_theme
+		echo Restarting panel
+		xfce4-panel -r  &> /dev/null
 	elif [[ $xfwm ]]; then
 		echo "Generating xfwm4 theme"
 		$(xfwm_themer $xfwm)
@@ -125,7 +126,7 @@ show_help(){
 	Avaible options
 	--wal       Generate color from pywal cache
 	--gtk       Choose gtk theme from list [ fantome ]
-	--xfwm      Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris ]
+	--xfwm      Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar ]
 	--help      Show help
 
 	EOF
