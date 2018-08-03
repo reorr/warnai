@@ -33,6 +33,15 @@ xfwm_themer(){
 	sed -i s/"color_5"/"$(get_colors 5)"/g "$dir"xfwm4/*
 	sed -i s/"color_6"/"$(get_colors 6)"/g "$dir"xfwm4/*
 	sed -i s/"color_7"/"$(get_colors 7)"/g "$dir"xfwm4/*
+	cp -r `$pwd`/xfce-notify-4.0 "$dir"
+	sed -i s/"color_bg"/"${get_colors_bg}"/g "$dir"xfce-notify-4.0/*
+	sed -i s/"color_1"/"$(get_colors 1)"/g "$dir"xfce-notify-4.0/*
+	sed -i s/"color_2"/"$(get_colors 2)"/g "$dir"xfce-notify-4.0/*
+	sed -i s/"color_3"/"$(get_colors 3)"/g "$dir"xfce-notify-4.0/*
+	sed -i s/"color_4"/"$(get_colors 4)"/g "$dir"xfce-notify-4.0/*
+	sed -i s/"color_5"/"$(get_colors 5)"/g "$dir"xfce-notify-4.0/*
+	sed -i s/"color_6"/"$(get_colors 6)"/g "$dir"xfce-notify-4.0/*
+	sed -i s/"color_7"/"$(get_colors 7)"/g "$dir"xfce-notify-4.0/*
 }
 
 gtk_themer(){
