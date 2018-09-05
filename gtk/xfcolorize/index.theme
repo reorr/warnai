@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=xfcolorize
+Comment=Yet Another Theme Based on Adapta
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=xfcolorize
+IconTheme=gnome
+CursorTheme=DMZ-Black
+ButtonLayout=menu:minimize,maximize,close

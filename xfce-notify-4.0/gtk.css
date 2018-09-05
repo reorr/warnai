@@ -6,7 +6,6 @@
 
 #XfceNotifyWindow label,
 #XfceNotifyWindow image {
-    font-family: Roboto;
     font-size: 12;
     color: #color_7;
 }

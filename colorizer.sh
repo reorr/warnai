@@ -56,7 +56,9 @@ gtk_themer(){
 	find "$dir"gtk-2.0/menubar-toolbar/ -type f -exec sed -i s/"color_7"/"$(get_colors 7)"/g {} \;
 	find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_bg"/"${get_colors_bg}"/g {} \;
 	find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_2"/"$(get_colors 2)"/g {} \;
+	find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_1"/"$(get_colors 1)"/g {} \;
 	find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_7"/"$(get_colors 7)"/g {} \;
+	find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_8"/"$(get_colors 8)"/g {} \;
 }
 
 apply_theme(){

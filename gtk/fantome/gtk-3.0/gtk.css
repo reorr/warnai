@@ -32,7 +32,7 @@
     color: #color_7; }
   .gtkstyle-fallback:disabled {
     background-color: #color_bg;
-    color: rgba(211, 218, 227, 0.45); }
+    color: #color_8; }
   .gtkstyle-fallback:selected {
     background-color: #color_2;
     color: #color_7; }
@@ -75,7 +75,7 @@ label selection {
   background-color: #color_2; }
 
 label:disabled {
-  color: rgba(211, 218, 227, 0.45); }
+  color: #color_8; }
 
 .dim-label, label.separator, popover label.separator,
 popover.background label.separator, headerbar .subtitle, .titlebar:not(headerbar) .subtitle {
@@ -154,7 +154,7 @@ entry {
     background-color: #color_bg;
     box-shadow: inset 1px 0 #color_2, inset -1px 0 #color_2, inset 0 1px #color_2, inset 0 -1px #color_2; }
   entry:disabled {
-    color: rgba(211, 218, 227, 0.45);
+    color: #color_8;
     border-color: #color_bg;
     background-color: rgba(64, 69, 82, 0.55); }
   entry.warning {
@@ -247,7 +247,7 @@ button {
   padding: 2px 6px;
   color: #color_7;
   border-color: #color_bg;
-  background-color: #444a58; }
+  background-color: #color_bg; }
   button separator {
     margin: 4px 1px; }
   button.flat, button.sidebar-button {
@@ -286,7 +286,7 @@ button {
     border-color: #color_bg;
     background-color: rgba(68, 74, 88, 0.55); }
     button:disabled label, button:disabled {
-      color: rgba(211, 218, 227, 0.45); }
+      color: #color_8; }
     button:disabled:active, button:disabled:checked {
       border-color: rgba(82, 148, 226, 0.75);
       background-color: rgba(82, 148, 226, 0.75);
@@ -399,12 +399,12 @@ button {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
-      color: rgba(211, 218, 227, 0.45); }
+      color: #color_8; }
     button.suggested-action:disabled {
       border-color: #color_bg;
       background-color: rgba(68, 74, 88, 0.55); }
       button.suggested-action:disabled label, button.suggested-action:disabled {
-        color: rgba(211, 218, 227, 0.45); }
+        color: #color_8; }
   button.destructive-action {
     background-clip: border-box;
     color: white;
@@ -429,12 +429,12 @@ button {
       border-color: transparent;
       background-color: transparent;
       background-image: none;
-      color: rgba(211, 218, 227, 0.45); }
+      color: #color_8; }
     button.destructive-action:disabled {
       border-color: #color_bg;
       background-color: rgba(68, 74, 88, 0.55); }
       button.destructive-action:disabled label, button.destructive-action:disabled {
-        color: rgba(211, 218, 227, 0.45); }
+        color: #color_8; }
   .stack-switcher > button {
     outline-offset: -3px; }
     .stack-switcher > button > label {
@@ -471,7 +471,7 @@ button {
 .inline-toolbar toolbutton > button {
   color: #color_7;
   border-color: #color_bg;
-  background-color: #444a58; }
+  background-color: #color_bg; }
   .inline-toolbar toolbutton > button:hover {
     color: #color_7;
     border-color: #color_bg;
@@ -484,7 +484,7 @@ button {
     border-color: #color_bg;
     background-color: rgba(68, 74, 88, 0.55); }
     .inline-toolbar toolbutton > button:disabled label, .inline-toolbar toolbutton > button:disabled {
-      color: rgba(211, 218, 227, 0.45); }
+      color: #color_8; }
   .inline-toolbar toolbutton > button:disabled:active, .inline-toolbar toolbutton > button:disabled:checked {
     border-color: rgba(82, 148, 226, 0.75);
     background-color: rgba(82, 148, 226, 0.75);
@@ -776,7 +776,7 @@ spinbutton button:active {
   color: #color_7; }
 
 spinbutton:disabled {
-  color: rgba(211, 218, 227, 0.45); }
+  color: #color_8; }
 
 spinbutton:not(.vertical) entry {
   min-width: 28px; }
@@ -1375,7 +1375,7 @@ window.csd > .titlebar:not(headerbar):backdrop {
   padding-right: 4px; }
 
 treeview.view {
-  border-left-color: rgba(211, 218, 227, 0.15);
+  border-left-color: #color_8;
   border-top-color: rgba(0, 0, 0, 0.1); }
   * {
     -GtkTreeView-horizontal-separator: 4;
@@ -1389,9 +1389,9 @@ treeview.view {
   treeview.view:selected, treeview.view:selected:focus {
     border-radius: 0;
     border-left-color: #81a1c1;
-    border-top-color: rgba(211, 218, 227, 0.1); }
+    border-top-color: #color_8; }
   treeview.view:disabled {
-    color: rgba(211, 218, 227, 0.45); }
+    color: #color_8; }
     treeview.view:disabled:selected {
       color: #97bfee; }
   treeview.view.separator {
@@ -1532,7 +1532,7 @@ menu,
       background-color: #color_2; }
     menu menuitem:disabled,
     .menu menuitem:disabled {
-      color: rgba(211, 218, 227, 0.45); }
+      color: #color_8; }
     menu menuitem arrow,
     .menu menuitem arrow {
       min-height: 16px;
@@ -1720,13 +1720,13 @@ notebook {
       notebook > header.left > tabs > arrow.down:first-child, notebook > header.right > tabs > arrow.down:first-child {
         margin-bottom: 2px; }
     notebook > header > tabs > arrow {
-      color: rgba(211, 218, 227, 0.45); }
+      color: #color_8; }
       notebook > header > tabs > arrow:hover {
-        color: rgba(211, 218, 227, 0.725); }
+        color: #color_8; }
       notebook > header > tabs > arrow:active {
-        color: #color_7; }
+        color: #color_2; }
       notebook > header > tabs > arrow:disabled {
-        color: rgba(211, 218, 227, 0.15); }
+        color: #color_8; }
     notebook > header.top > tabs > tab:hover:not(:checked) {
       box-shadow: inset 0 -1px #color_bg; }
     notebook > header.bottom > tabs > tab:hover:not(:checked) {
@@ -1736,10 +1736,10 @@ notebook {
     notebook > header.right > tabs > tab:hover:not(:checked) {
       box-shadow: inset 1px 0 #color_bg; }
     notebook > header > tabs > tab {
-      color: rgba(211, 218, 227, 0.45);
+      color: #color_8;
       background-color: rgba(64, 69, 82, 0); }
       notebook > header > tabs > tab:hover:not(:checked) {
-        color: rgba(211, 218, 227, 0.725);
+        color: #color_8;
         background-color: rgba(64, 69, 82, 0.5);
         border-color: #color_bg; }
       notebook > header > tabs > tab:checked {
@@ -2125,7 +2125,7 @@ scale {
     outline-offset: 2px;
     -gtk-outline-radius: 4.5px;
     border-radius: 2.5px;
-    background-color: #2d303b; }
+    background-color: #bg_color; }
     scale trough:disabled {
       background-color: rgba(45, 48, 59, 0.55); }
     .osd scale trough {
@@ -2159,7 +2159,7 @@ scale {
     scale fill:disabled {
       background-color: transparent; }
   scale slider {
-    background-color: #444a58;
+    background-color: #color_bg;
     border: 1px solid #262933;
     border-radius: 100%;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -2246,7 +2246,7 @@ scale {
 progressbar {
   padding: 0;
   font-size: smaller;
-  color: rgba(211, 218, 227, 0.7); }
+  color: #color_8; }
   progressbar.osd {
     min-width: 3px;
     min-height: 3px;
@@ -2266,7 +2266,7 @@ progressbar {
   progressbar trough {
     border: none;
     border-radius: 3px;
-    background-color: #2d303b; }
+    background-color: #bg_color; }
     row:selected progressbar trough,
     infobar progressbar trough {
       background-color: rgba(0, 0, 0, 0.2); }
@@ -2283,7 +2283,7 @@ levelbar trough {
   border: none;
   padding: 3px;
   border-radius: 3px;
-  background-color: #2d303b; }
+  background-color: #bg_color; }
 
 levelbar.horizontal.discrete block {
   margin: 0 1px; }
@@ -2439,7 +2439,7 @@ row.activatable:active {
   color: #color_7; }
 
 row.activatable:disabled {
-  color: rgba(211, 218, 227, 0.45); }
+  color: #color_8; }
   row.activatable:disabled image {
     color: inherit; }
 
@@ -2502,11 +2502,11 @@ calendar {
     color: #color_7;
     border: none; }
   calendar.button {
-    color: rgba(211, 218, 227, 0.45); }
+    color: #color_8; }
     calendar.button:hover {
       color: #color_7; }
     calendar.button:disabled {
-      color: rgba(211, 218, 227, 0.45); }
+      color: #color_8; }
   calendar:indeterminate {
     color: alpha(currentColor,0.55); }
   calendar.highlight {
@@ -2790,7 +2790,7 @@ colorswatch#add-color-button {
   border-width: 1px;
   color: #color_7;
   border-color: #color_bg;
-  background-color: #444a58; }
+  background-color: #color_bg; }
   colorswatch#add-color-button:hover {
     color: #color_7;
     border-color: #color_bg;
@@ -3056,7 +3056,7 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
   border-style: solid;
   border-width: 1px; }
   .disk-space-display.unknown {
-    background-color: rgba(211, 218, 227, 0.5);
+    background-color: #color_8;
     border-color: rgba(180, 192, 207, 0.5); }
   .disk-space-display.used {
     background-color: rgba(82, 148, 226, 0.8);
@@ -3205,7 +3205,7 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
   border-style: solid; }
 
 .gedit-search-entry-occurrences-tag {
-  color: rgba(211, 218, 227, 0.6);
+  color: #color_8;
   border: none;
   margin: 2px;
   padding: 2px; }
@@ -3362,7 +3362,7 @@ button.documents-load-more {
   border-radius: 2px; }
 
 .documents-collection-icon, .photos-collection-icon {
-  background-color: rgba(211, 218, 227, 0.3);
+  background-color: #color_8;
   border-radius: 2px; }
 
 button.documents-favorite:active,
@@ -3515,6 +3515,7 @@ panel-toplevel.background na-tray-applet {
 .xfce4-panel.panel {
   background-color: #color_bg;
   text-shadow: none;
+  color: #color_7;
   -gtk-icon-shadow: none; }
 
 #tasklist-button {
@@ -3535,7 +3536,7 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
   color: #BAC3CF;
   border-radius: 0;
   border: none;
-  background-color: #color_bg; }
+  background-color: rgba(0, 0, 0, 0); }
   .mate-panel-menu-bar button:hover:not(#tasklist-button),
   panel-toplevel.background button:hover:not(#tasklist-button), .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover {
     border: none;
@@ -3885,7 +3886,7 @@ GraniteWidgetsWelcome label {
 
 GraniteWidgetsWelcome .h1,
 GraniteWidgetsWelcome .h3 {
-  color: rgba(211, 218, 227, 0.8); }
+  color: #color_8; }
 
 .help_button {
   border-radius: 0; }
@@ -3968,7 +3969,7 @@ GtkListBox .h4 {
 #content_frame button {
   color: #color_7;
   border-color: #color_bg;
-  background-color: #444a58; }
+  background-color: #color_bg; }
   #content_frame button:hover {
     color: #color_7;
     border-color: #color_bg;
@@ -3981,7 +3982,7 @@ GtkListBox .h4 {
     border-color: #color_bg;
     background-color: rgba(68, 74, 88, 0.55); }
     #content_frame button:disabled label, #content_frame button:disabled {
-      color: rgba(211, 218, 227, 0.45); }
+      color: #color_8; }
 
 #buttonbox_frame {
   padding-top: 20px;
@@ -4264,6 +4265,10 @@ filechooser placessidebar.sidebar scrollbar,
     background-image: none;
     color: #color_7;
     box-shadow: inset 0 0px;
+}
+
+.primary-toolbar.horizontal{
+  border-width: 0;
 }
 
 @define-color theme_fg_color #color_7;
