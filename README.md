@@ -21,7 +21,9 @@ Usage : colorizer [options #optional]
 Avaible options
 --wal       Generate color from pywal cache
 --gtk       Choose gtk theme from list [ fantome ]
---xfwm      Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows ]
+--xfwm      Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar ]
+--openbox 	Choose openbox theme from list [ pelangi ]
+--tint2 	Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | oslim-text-tinted]
 --help      Show help
 </pre>
 
