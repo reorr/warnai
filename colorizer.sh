@@ -79,6 +79,7 @@ tint_themer(){
 	sed -i s/"color_5"/"$(get_colors 5)"/g "$conf"tint2/tint2rc
 	sed -i s/"color_6"/"$(get_colors 6)"/g "$conf"tint2/tint2rc
 	sed -i s/"color_7"/"$(get_colors 7)"/g "$conf"tint2/tint2rc
+	sed -i -E "s%\/home\/[a-zA-Z0-9_-]+\/%\/home\/${USER}\/%g" ~/.config/tint2/tint2rc
 	killall tint2
 	tint2 </dev/null &>/dev/null &
 }
@@ -135,6 +136,12 @@ main_wal(){
 		"$dir"gtk-2.0/render-assets.sh;
 		cd "$dir"gtk-3.0/
 		"$dir"gtk-3.0/render-assets.sh;
+		apply_theme
+	elif [[ $wal && $openbox && $tint2 ]]; then
+		echo "Generating openbox theme"
+		$(ob_themer $openbox)
+		echo "Generating tint2 theme"
+		$(tint_themer $tint2)
 		apply_theme
 	elif [[ $wal && $xfwm ]]; then
 		echo "Generating xfwm4 theme"
