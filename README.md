@@ -53,3 +53,4 @@ $ ./colorizer.sh --wal --xfwm diamondo
 - fantome gtk theme from [Adhi Pambudi](https://github.com/addy-dclxvi/gtk-theme-collections/)
 - diamondo xfwm theme inspired by [Circela xfwm theme ](https://github.com/addy-dclxvi/xfwm4-theme-collections)
 - xfwm theme from [Wotalim](https://github.com/wotalim/sora-aoi)
+- openbox theme pelangi by [Adhi Pambudi](https://github.com/addy-dclxvi/openbox-theme-collections)
