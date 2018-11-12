@@ -921,7 +921,7 @@ headerbar,
   box-shadow: inset 0 1px #color_bg; }
   .csd headerbar,
   .csd .titlebar:not(headerbar) {
-    background-color: rgba(12, 15, 22, 0.97);
+    background-color: #color_bg;
     border-color: #color_bg; }
   headerbar:backdrop,
   .titlebar:backdrop:not(headerbar) {
@@ -1088,8 +1088,8 @@ window.csd > .titlebar:not(headerbar):backdrop {
 .primary-toolbar button, headerbar button {
   color: #color_7;
   outline-offset: -3px;
-  background-color: rgba(12, 15, 22, 0);
-  border-color: rgba(12, 15, 22, 0); }
+  background-color: #color_bg;
+  border-color: #color_bg; }
   .primary-toolbar button:backdrop, headerbar button:backdrop {
     opacity: 0.7; }
   .primary-toolbar button:hover, headerbar button:hover {
@@ -1102,8 +1102,8 @@ window.csd > .titlebar:not(headerbar):backdrop {
     background-color: #color_2;
     background-clip: padding-box; }
   .primary-toolbar button:disabled, headerbar button:disabled {
-    background-color: rgba(12, 15, 22, 0);
-    border-color: rgba(12, 15, 22, 0); }
+    background-color: #color_bg;
+    border-color: #color_bg; }
     .primary-toolbar button:disabled label, headerbar button:disabled label, .primary-toolbar button:disabled, headerbar button:disabled {
       color: #color_1; }
   .primary-toolbar button:disabled:active, headerbar button:disabled:active, .primary-toolbar button:disabled:checked, headerbar button:disabled:checked {
@@ -1213,8 +1213,8 @@ window.csd > .titlebar:not(headerbar):backdrop {
     background-color: #color_2;
     border-color: #color_2; }
   .primary-toolbar button.suggested-action.flat:disabled, headerbar button.suggested-action.flat:disabled, .primary-toolbar button.suggested-action.sidebar-button:disabled, headerbar button.suggested-action.sidebar-button:disabled, .primary-toolbar button.suggested-action:disabled, headerbar button.suggested-action:disabled {
-    background-color: rgba(12, 15, 22, 0);
-    border-color: rgba(12, 15, 22, 0); }
+    background-color: #color_bg;
+    border-color: #color_bg; }
     .primary-toolbar button.suggested-action.flat:disabled label, headerbar button.suggested-action.flat:disabled label, .primary-toolbar button.suggested-action.sidebar-button:disabled label, headerbar button.suggested-action.sidebar-button:disabled label, .primary-toolbar button.suggested-action.flat:disabled, headerbar button.suggested-action.flat:disabled, .primary-toolbar button.suggested-action.sidebar-button:disabled, headerbar button.suggested-action.sidebar-button:disabled, .primary-toolbar button.suggested-action:disabled label, headerbar button.suggested-action:disabled label, .primary-toolbar button.suggested-action:disabled, headerbar button.suggested-action:disabled {
       color: #color_7; }
 
@@ -1242,8 +1242,8 @@ window.csd > .titlebar:not(headerbar):backdrop {
     background-color: #ec1b22;
     border-color: #ec1b22; }
   .primary-toolbar button.destructive-action.flat:disabled, headerbar button.destructive-action.flat:disabled, .primary-toolbar button.destructive-action.sidebar-button:disabled, headerbar button.destructive-action.sidebar-button:disabled, .primary-toolbar button.destructive-action:disabled, headerbar button.destructive-action:disabled {
-    background-color: rgba(12, 15, 22, 0);
-    border-color: rgba(12, 15, 22, 0); }
+    background-color: #color_bg;
+    border-color: #color_bg; }
     .primary-toolbar button.destructive-action.flat:disabled label, headerbar button.destructive-action.flat:disabled label, .primary-toolbar button.destructive-action.sidebar-button:disabled label, headerbar button.destructive-action.sidebar-button:disabled label, .primary-toolbar button.destructive-action.flat:disabled, headerbar button.destructive-action.flat:disabled, .primary-toolbar button.destructive-action.sidebar-button:disabled, headerbar button.destructive-action.sidebar-button:disabled, .primary-toolbar button.destructive-action:disabled label, headerbar button.destructive-action:disabled label, .primary-toolbar button.destructive-action:disabled, headerbar button.destructive-action:disabled {
       color: #color_7; }
 
@@ -2514,7 +2514,7 @@ calendar {
 
 messagedialog .titlebar {
   min-height: 20px;
-  background-color: rgba(12, 15, 22, 0.97);
+  background-color: #color_bg;
   border-bottom: 1px solid rgba(32, 35, 43, 0.97); }
 
 messagedialog .dialog-action-area button {
@@ -2888,7 +2888,7 @@ decoration {
   .solid-csd decoration {
     border-radius: 0;
     margin: 1px;
-    background-color: rgba(12, 15, 22, 0.97);
+    background-color: #color_bg;
     box-shadow: none; }
 
 headerbar.default-decoration button.titlebutton,
@@ -2905,7 +2905,7 @@ headerbar button.titlebutton,
   border-color: transparent;
   background-color: transparent;
   background-image: none;
-  background-color: rgba(12, 15, 22, 0); }
+  background-color: #color_bg; }
   headerbar button.titlebutton:hover,
   .titlebar button.titlebutton:hover {
     color: #color_7;
@@ -3988,7 +3988,7 @@ GtkListBox .h4 {
   padding-top: 20px;
   padding-bottom: 0px;
   border-style: none;
-  background-color: rgba(12, 15, 22, 0.97);
+  background-color: #color_bg;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border: solid rgba(0, 0, 0, 0.1);
