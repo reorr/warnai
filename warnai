@@ -1,10 +1,11 @@
 #!/bin/bash
 
-dir=$HOME/.themes/colorizer/
+dir=$HOME/.themes/warna/
 pwd=/usr/bin/pwd
 conf=$HOME/.config/
 file=$HOME/.Xresources
 arr=()
+prog_dir=`$pwd`
 
 fill_color(){
         get_colors(){
@@ -42,7 +43,7 @@ ob_themer(){
 	for i in {1..8}; do
 		sed -i s/"color_$i"/"$(get_colors $i)"/g "$dir"openbox-3/*;
 	done
-	if [[ $(cat $HOME/.config/openbox/rc.xml | grep "colorize") ]]; then
+	if [[ $(cat $HOME/.config/openbox/rc.xml | grep "warna") ]]; then
 		openbox --reconfigure
 	elif [[ $(which obconf) ]]; then
 		obconf >/dev/null 2>&1
@@ -67,6 +68,7 @@ gtk_themer(){
 	find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_bg"/"${get_colors_bg}"/g {} \;
 	find "$dir"gtk-2.0/menubar-toolbar/ -type f -exec sed -i s/"color_bg"/"${get_colors_bg}"/g {} \;
 	find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_bg"/"${get_colors_bg}"/g {} \;
+	
 	for i in {1..8}; do
 		find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_$i"/"$(get_colors $i)"/g {} \;;
 		find "$dir"gtk-2.0/menubar-toolbar/ -type f -exec sed -i s/"color_$i"/"$(get_colors $i)"/g {} \;
@@ -77,9 +79,9 @@ gtk_themer(){
 apply_theme(){
 	echo "Applying theme ..."
 	xfconf-query -c xfwm4 -p /general/theme -s "adwaita"
-	xfconf-query -c xfwm4 -p /general/theme -s "colorizer"
+	xfconf-query -c xfwm4 -p /general/theme -s "warna"
 	xfconf-query -c xsettings -p /Net/ThemeName -s "adwaita"
-	xfconf-query -c xsettings -p /Net/ThemeName -s "colorizer"
+	xfconf-query -c xsettings -p /Net/ThemeName -s "warna"
 	echo "Done"
 	notify-send "Done changing theme :)"
 }
@@ -204,8 +206,8 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 main() {
-	if [[ ! -d $HOME/.themes/colorizer ]]; then
-		mkdir $HOME/.themes/colorizer
+	if [[ ! -d $HOME/.themes/warna ]]; then
+		mkdir $HOME/.themes/warna
 	fi
 	echo "Generating theme ..."
 	fill_color
@@ -218,6 +220,11 @@ main() {
 			gtk )
 				#echo "$gtk"
 				$(gtk_themer $gtk)
+				cd "$dir"gtk-2.0/
+				sh "$dir"gtk-2.0/render-assets.sh
+				cd "$dir"gtk-3.0/
+				sh "$dir"gtk-3.0/render-assets.sh
+				cd $prog_dir
 				;;
 			tint2 )
 				#echo "$tint2"
