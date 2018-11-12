@@ -17,13 +17,13 @@
 #XfceNotifyWindow button {
     border-style: none;
     background-image: none;
-    background-color : #color_1;
+    background-color : #color_2;
 }
 
 #XfceNotifyWindow button:hover {
     border-style: none;
     background-image: none;
-    background-color : #color_2;
+    background-color : #color_1;
 }
 
 #XfceNotifyWindow progressbar {
