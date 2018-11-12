@@ -23,7 +23,7 @@ Avaible options
 --wal     | -w    Generate color from pywal cache
 --xcolor  | -xc   Generate color from custom .Xresources file
 --gtk     | -g    Choose gtk theme from list [ fantome ]
---xfwm    | -xf   Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar | 365 ]
+--xfwm    | -xf   Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar | 365 | vela ]
 --openbox | -ob   Choose openbox theme from list [ pelangi | tricky | large-tb | mek-oes ]
 --tint2   | -t    Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark | floaty-rounded | floaty ]
 --help    | -h    Show help
