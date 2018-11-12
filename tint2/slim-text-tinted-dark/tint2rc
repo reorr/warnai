@@ -38,11 +38,11 @@ border_sides = B
 border_content_tint_weight = 0
 background_content_tint_weight = 0
 background_color = #color_bg 100
-border_color = #color_1 100
+border_color = #color_4 100
 background_color_hover = #color_bg 100
-border_color_hover = #color_1 100
+border_color_hover = #color_4 100
 background_color_pressed = #color_bg 100
-border_color_pressed = #color_1 100
+border_color_pressed = #color_4 100
 
 # Background 4: Urgent task
 rounded = 5
@@ -80,7 +80,7 @@ background_color = #color_bg 100
 border_color = #color_bg 100
 background_color_hover = #color_bg 100
 border_color_hover = #555555 100
-background_color_pressed = #color_1 100
+background_color_pressed = #color_4 100
 border_color_pressed = #555555 100
 
 # Background 7: 
