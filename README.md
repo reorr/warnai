@@ -1,5 +1,7 @@
-# Colorizer
-Colorize gtk and xfwm theme from .Xresources
+<div align="center">
+	<h1>warnai</h1>
+	<p>Swiss army theme changer from .Xresources</p>
+</div>
 
 
 ## Dependencies
@@ -7,43 +9,43 @@ Colorize gtk and xfwm theme from .Xresources
 
 ## Usage
 <pre>
-$ ./colorizer.sh
+$ ./warnai
                                     
- _____     _         _             
-|     |___| |___ ___|_|___ ___ ___ 
-|   --| . | | . |  _| |- _| -_|  _|
-|_____|___|_|___|_| |_|___|___|_|  
-                                   
+.-. . .-.  .--.  .----. .-. .-.  .--.  .-.
+| |/ \| | / {} \ | {}  }|  `| | / {} \ | |
+|  .'.  |/  /\  \| .-. \| |\  |/  /\  \| |
+`-'   `-'`-'  `-'`-' `-'`-' `-'`-'  `-'`-'                                   
 
 
-Usage : colorizer [options #optional]
+Usage : warnai [options #parameter]
 
 Avaible options
---wal       Generate color from pywal cache
---gtk       Choose gtk theme from list [ fantome ]
---xfwm      Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar ]
---openbox   Choose openbox theme from list [ pelangi ]
---tint2     Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark]
---help      Show help
+--wal     | -w    Generate color from pywal cache
+--xcolor  | -xc   Generate color from custom .Xresources file
+--gtk     | -g    Choose gtk theme from list [ fantome ]
+--xfwm    | -xf   Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar ]
+--openbox | -ob   Choose openbox theme from list [ pelangi | tricky | large-tb | mek-oes ]
+--tint2   | -t    Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark | floaty-rounded | floaty ]
+--help    | -h    Show help
 </pre>
 
 To generate gtk theme and xfwm4 theme, use:
 <pre>
-$ ./colorizer.sh --wal --gtk fantome --xfwm [ pastel | black-paha | one_new | nest1 | diamondo | wendows ]
+$ ./warnai --wal --gtk fantome --xfwm [ pastel | black-paha | one_new | nest1 | diamondo | wendows ]
 </pre>
 To generate only xfwm4 theme, use:
 <pre>
-$ ./colorizer.sh --wal --xfwm [ pastel | black-paha | one_new | nest1 | diamondo | wendows ]
+$ ./warnai --wal --xfwm [ pastel | black-paha | one_new | nest1 | diamondo | wendows ]
 </pre>
 remember to choose only one xfwm theme, and not using bracket
 example:
 <pre>
-$ ./colorizer.sh --wal --xfwm pastel
+$ ./warnai --wal --xfwm pastel
 </pre>
 or
 
 <pre>
-$ ./colorizer.sh --wal --xfwm diamondo
+$ ./warnai --wal --xfwm diamondo
 </pre>
 
 ## Preview
