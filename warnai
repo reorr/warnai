@@ -94,7 +94,7 @@ show_help(){
 	--gtk     | -g    Choose gtk theme from list [ fantome ]
 	--xfwm    | -xf   Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar | 365 | vela ]
 	--openbox | -ob   Choose openbox theme from list [ pelangi | tricky | large-tb | mek-oes ]
-	--tint2   | -t    Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark | floaty-rounded | floaty ]
+	--tint2   | -t    Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark | floaty-rounded | floaty | slim-float ]
 	--help    | -h    Show help
 
 	EOF
@@ -181,7 +181,7 @@ while [[ "$#" -gt 0 ]]; do
 			if [[ -z $2 ]]; then
 				echo "Please specify the tint2 theme"
 				exit 1
-			elif [[ "$2" = "chromeos" || "$2" = "chromeos-tinted" || "$2" = "chromeos-pelangi" || "$2" = "slim-text-dark" || "$2" = "slim-text-tinted" || "$2" = "slim-text-tinted-dark" || "$2" = "floaty-rounded" || "$2" = "floaty" ]]; then
+			elif [[ "$2" = "chromeos" || "$2" = "chromeos-tinted" || "$2" = "chromeos-pelangi" || "$2" = "slim-text-dark" || "$2" = "slim-text-tinted" || "$2" = "slim-text-tinted-dark" || "$2" = "floaty-rounded" || "$2" = "floaty" || "$2" = "slim-float" ]]; then
 				tint2=$2
 				#echo $tint2
 				#$(tint_themer $tint2)
