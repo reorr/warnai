@@ -4267,6 +4267,14 @@ filechooser placessidebar.sidebar scrollbar,
     box-shadow: inset 0 0px;
 }
 
+.-vala-panel-appmenu-private > menuitem > label {
+  font-weight: normal;
+}
+
+.-vala-panel-appmenu-private > menuitem:first-child > label {
+  font-weight: bold;
+}
+
 .primary-toolbar.horizontal{
   border-width: 0;
 }
