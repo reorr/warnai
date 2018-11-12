@@ -2,6 +2,6 @@
 static char * bottom_active_xpm[] = {
 "2 2 2 1",
 " 	c None",
-".	c #afafaf",
+".	c #color_3",
 "..",
 ".."};
