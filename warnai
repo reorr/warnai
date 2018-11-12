@@ -1,3 +1,5 @@
+#!/bin/bash
+
 dir=$HOME/.themes/colorizer/
 pwd=/usr/bin/pwd
 conf=$HOME/.config/
@@ -84,13 +86,6 @@ apply_theme(){
 
 show_help(){
 	cat <<-EOF
-                                    
-	.-. . .-.  .--.  .----. .-. .-.  .--.  .-.
-	| |/ \| | / {} \ | {}  }|  `| | / {} \ | |
-	|  .'.  |/  /\  \| .-. \| |\  |/  /\  \| |
-	`-'   `-'`-'  `-'`-' `-'`-' `-'`-'  `-'`-'                                   
-
-
 	Usage : warnai [options #parameter]
 
 	Avaible options
