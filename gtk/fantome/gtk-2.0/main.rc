@@ -953,7 +953,7 @@ style "button" {
     image {
       function = BOX
       state = ACTIVE
-      file = "assets/button-active.png"
+      file = "assets/button-hover.png"
       border = { 4, 4, 4, 4 }
       stretch = TRUE
     }
