@@ -165,11 +165,11 @@ entry {
       color: white; }
     entry.warning:focus {
       color: white;
-      background-color: #ebcb8b;
+      background-color: #color_4;
       box-shadow: none; }
     entry.warning selection, entry.warning selection:focus {
       background-color: white;
-      color: #ebcb8b; }
+      color: #color_4; }
   entry.error {
     color: white;
     border-color: #color_bg;
@@ -1070,10 +1070,10 @@ window.csd > .titlebar:not(headerbar):backdrop {
     background-color: rgba(167, 94, 57, 0.988); }
     .primary-toolbar entry.warning:focus, headerbar entry.warning:focus {
       color: white;
-      background-color: #ebcb8b; }
+      background-color: #color_4; }
     .primary-toolbar entry.warning selection, headerbar entry.warning selection, .primary-toolbar entry.warning selection:focus, headerbar entry.warning selection:focus {
       background-color: white;
-      color: #ebcb8b; }
+      color: #color_4; }
   .primary-toolbar entry.error, headerbar entry.error {
     color: white;
     border-color: #color_bg;
@@ -2297,8 +2297,8 @@ levelbar block:not(.empty) {
   border-radius: 2px; }
 
 levelbar block.low {
-  border-color: #ebcb8b;
-  background-color: #ebcb8b; }
+  border-color: #color_4;
+  background-color: #color_4; }
 
 levelbar block.high {
   border-color: #color_2;
@@ -4300,7 +4300,7 @@ filechooser placessidebar.sidebar scrollbar,
 @define-color theme_unfocused_base_color #color_bg;
 @define-color borders #color_bg;
 @define-color unfocused_borders #color_bg;
-@define-color warning_color #ebcb8b;
+@define-color warning_color #color_4;
 @define-color error_color #dbbb7b;
 @define-color success_color #a3be8c;
 @define-color placeholder_text_color #4b5262;
