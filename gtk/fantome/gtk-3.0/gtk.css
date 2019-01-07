@@ -4272,7 +4272,7 @@ filechooser placessidebar.sidebar scrollbar,
 }
 
 .-vala-panel-appmenu-private > menuitem:first-child > label {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .primary-toolbar.horizontal{
