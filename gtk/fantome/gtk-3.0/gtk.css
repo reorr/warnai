@@ -3600,7 +3600,7 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
 .panel {
   background-color: transparent;
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   -gtk-icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
   .panel-shadow {
@@ -3935,14 +3935,14 @@ GtkListBox .h4 {
 #panel_window {
   background-color: #color_bg;
   color: #color_7;
-  font-weight: bold;
+  font-weight: normal;
   box-shadow: inset 0 -1px rgba(27, 29, 35, 0.95); }
   #panel_window menubar {
     padding-left: 5px; }
     #panel_window menubar, #panel_window menubar > menuitem {
       background-color: transparent;
       color: #color_7;
-      font-weight: bold; }
+      font-weight: normal; }
   #panel_window menubar menuitem:disabled {
     color: rgba(186, 195, 207, 0.5); }
     #panel_window menubar menuitem:disabled label {
