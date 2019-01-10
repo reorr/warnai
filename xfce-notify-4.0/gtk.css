@@ -1,6 +1,6 @@
 #XfceNotifyWindow {
     background-color: #color_bg;
-    border-radius: 0px;
+    border-radius: 1px;
     border: 1px solid #color_bg;
 }
 
@@ -27,7 +27,7 @@
 }
 
 #XfceNotifyWindow progressbar {
-    border-radius: 0px;
+    border-radius: 1px;
 }
 
 #XfceNotifyWindow progressbar progress {
@@ -41,5 +41,5 @@
     background-image: none;
     background-color: #color_2;
     border: 0px solid shade(#color_2, 0.6);
-    /*border-radius: 0px;*/
+    border-radius: 1px;
 }
