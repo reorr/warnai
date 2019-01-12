@@ -1253,7 +1253,7 @@
          inkscape:connector-curvature="0"
          id="path10940-8"
          d="m 99.000005,8.862187 c 0,3.589846 2.910155,6.499996 6.499995,6.499996 3.58985,0 6.5,-2.91015 6.5,-6.499996 0,-3.5898455 -2.91015,-6.4999958 -6.5,-6.4999958 -3.58984,0 -6.499995,2.9101503 -6.499995,6.4999958 z M 100,8.7764737 c 0,-3.0865694 2.41343,-5.4142875 5.5,-5.4142875 3.08657,0 5.5,2.4134314 5.5,5.5000008 0,3.08657 -2.41343,5.485712 -5.5,5.485712 -3.08657,0 -5.5,-2.484855 -5.5,-5.5714253 z"
-         style="opacity:1;fill:#color_bg;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#color_7;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          sodipodi:nodetypes="ssssssssss" />
       <g
          id="g10964-19">
@@ -1272,7 +1272,7 @@
                  id="g5428-8-1-7-9">
                 <rect
                    ry="13.246163"
-                   style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#2d323d;fill-opacity:1;fill-rule:nonzero;stroke:#999999;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                   style="color:#color_bg;display:inline;overflow:visible;visibility:visible;fill:#color_bg;fill-opacity:1;fill-rule:nonzero;stroke:#999999;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                    id="rect5147-9-1-7-4"
                    width="23.088213"
                    height="22.722145"
@@ -1670,7 +1670,7 @@
          inkscape:connector-curvature="0"
          id="path10940-9-4"
          d="m 98,8.3621828 c 0,3.8659902 3.13401,7.0000002 7,7.0000002 3.86599,0 7,-3.13401 7,-7.0000002 0,-3.86599 -3.13401,-7 -7,-7 -3.86599,0 -7,3.13401 -7,7 z m 1,0 c 0,-3.324 2.676,-6 6,-6 3.324,0 6,2.676 6,6 0,3.3240002 -2.676,6.0000002 -6,6.0000002 -3.324,0 -6,-2.676 -6,-6.0000002 z"
-         style="opacity:1;fill:#color_bg;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#color_7;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <g
          id="g10964-1-7">
         <g
@@ -1679,7 +1679,7 @@
            transform="matrix(0.93617253,0,0,0.93566004,-96.78315,-244.76084)"
            inkscape:label="#g15805">
           <rect
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
+             style="color:#color_7;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
              id="rect14348-4-9"
              width="17.090866"
              height="17.100227"
@@ -1695,7 +1695,7 @@
                  id="g5428-8-1-7-3-0">
                 <rect
                    ry="13.246163"
-                   style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#2d323d;fill-opacity:1;fill-rule:nonzero;stroke:#999999;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                   style="color:#color_bg;display:inline;overflow:visible;visibility:visible;fill:#color_bg;fill-opacity:1;fill-rule:nonzero;stroke:#999999;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                    id="rect5147-9-1-7-9-4"
                    width="25.187147"
                    height="24.787813"
