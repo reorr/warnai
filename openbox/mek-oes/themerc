@@ -165,8 +165,8 @@ menu.items.font:                     shadow=n
 menu.title.text.font:                shadow=n
 
 # Everything else
-border.width:                5
-padding.width:               15
+border.width:                0
+padding.width:               10
 padding.height:              10
 window.handle.width:         0
 window.client.padding.width: 0
