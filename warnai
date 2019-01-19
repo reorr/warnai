@@ -224,10 +224,10 @@ main() {
 				#echo "$gtk"
 				$(gtk_themer $gtk)
 				pushd "$dir"gtk-2.0/
-				sh "$dir"gtk-2.0/render-assets.sh
+				python3 "$dir"gtk-2.0/render-assets.py
 				popd
 				pushd "$dir"gtk-3.0/
-				sh "$dir"gtk-3.0/render-assets.sh
+				python3 "$dir"gtk-3.0/render-assets.py
 				popd
 				;;
 			tint2 )
