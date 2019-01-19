@@ -4,13 +4,21 @@ dir=$HOME/.themes/warna/
 conf=$HOME/.config/
 file=$HOME/.Xresources
 arr=()
+skip_render=false
 pushd $(dirname $(readlink -f $0)) >/dev/null 2>&1
 
-fill_color(){
-        get_colors(){
-                grep "color$1 *:" $file | awk -F\# '{print $2}' | head -1
-        }
-        get_colors_bg=`grep "background *:" $file | awk -F\# '{print $2}' | head -1`
+# fill_color(){
+#         get_colors(){
+#                 grep "color$1 *:" $file | awk -F\# '{print $2}' | head -1
+#         }
+#         get_colors_bg=`grep "background *:" $file | awk -F\# '{print $2}' | head -1`
+# }
+
+load_colors(){
+	colors[bg]=$(grep "background:" $1 | awk -F\# '{print $2}' | head -1)
+	for i in {1..8}; do
+		colors[i]=$(grep "color$i *:" $1 | awk -F\# '{print $2}' | head -1)
+	done
 }
 
 xfwm_themer(){
@@ -20,14 +28,14 @@ xfwm_themer(){
 		rm "$dir"xfwm4/*
 	fi	
 	cp xfwm4/$1/* "$dir"xfwm4/
-	sed -i s/"color_bg"/"${get_colors_bg}"/g "$dir"xfwm4/*
+	sed -i s/"color_bg"/"${colors[bg]}"/g "$dir"xfwm4/*
 	for i in {1..8}; do
-		sed -i s/"color_$i"/"$(get_colors $i)"/g "$dir"xfwm4/*;
+		sed -i s/"color_$i"/"${colors[$i]}"/g "$dir"xfwm4/*;
 	done
 	cp -r xfce-notify-4.0 "$dir"
-	sed -i s/"color_bg"/"${get_colors_bg}"/g "$dir"xfce-notify-4.0/*
+	sed -i s/"color_bg"/"${colors[bg]}"/g "$dir"xfce-notify-4.0/*
 	for i in {1..8}; do
-		sed -i s/"color_$i"/"$(get_colors $i)"/g "$dir"xfce-notify-4.0/*;
+		sed -i s/"color_$i"/"${colors[$i]}"/g "$dir"xfce-notify-4.0/*;
 	done
 }
 
@@ -38,9 +46,9 @@ ob_themer(){
 		rm "$dir"openbox-3/*
 	fi	
 	cp openbox/$1/* "$dir"openbox-3/
-	sed -i s/"color_bg"/"${get_colors_bg}"/g "$dir"openbox-3/*
+	sed -i s/"color_bg"/"${colors[bg]}"/g "$dir"openbox-3/*
 	for i in {1..8}; do
-		sed -i s/"color_$i"/"$(get_colors $i)"/g "$dir"openbox-3/*;
+		sed -i s/"color_$i"/"${colors[$i]}"/g "$dir"openbox-3/*;
 	done
 	if [[ $(cat $HOME/.config/openbox/rc.xml | grep "warna") ]]; then
 		openbox --reconfigure
@@ -52,14 +60,14 @@ ob_themer(){
 tint_themer(){
 	cp "$conf"/tint2/tint2rc "$conf"/tint2/tint2rc.old
 	cp tint2/$1/* "$conf"tint2/
-	sed -i s/"color_bg"/"${get_colors_bg}"/g "$conf"tint2/tint2rc
+	sed -i s/"color_bg"/"${colors[bg]}"/g "$conf"tint2/tint2rc
 	for i in {1..8}; do
-		sed -i s/"color_$i"/"$(get_colors $i)"/g "$conf"tint2/tint2rc;
+		sed -i s/"color_$i"/"${colors[$i]}"/g "$conf"tint2/tint2rc;
 	done
 	sed -i -E "s%\/home\/[a-zA-Z0-9_-]+\/%\/home\/${USER}\/%g" ~/.config/tint2/tint2rc
-	sed -i s/"color_bg"/"${get_colors_bg}"/g "$conf"tint2/menu.svg;
+	sed -i s/"color_bg"/"${colors[bg]}"/g "$conf"tint2/menu.svg;
 	for i in {1..8}; do
-		sed -i s/"color_$i"/"$(get_colors $i)"/g "$conf"tint2/menu.svg;
+		sed -i s/"color_$i"/"${colors[$i]}"/g "$conf"tint2/menu.svg;
 	done
 	killall tint2
 	tint2 </dev/null &>/dev/null &
@@ -68,14 +76,16 @@ tint_themer(){
 gtk_themer(){
 	rm -rf "$dir"gtk-*
 	cp -r gtk/$1/* "$dir"
-	find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_bg"/"${get_colors_bg}"/g {} \;
-	find "$dir"gtk-2.0/menubar-toolbar/ -type f -exec sed -i s/"color_bg"/"${get_colors_bg}"/g {} \;
-	find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_bg"/"${get_colors_bg}"/g {} \;
-	
+	find "$dir" -type f -not -ipath "*.png" -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
+	# find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
+	# find "$dir"gtk-2.0/menubar-toolbar/ -type f -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
+	# find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
+
 	for i in {1..8}; do
-		find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_$i"/"$(get_colors $i)"/g {} \;;
-		find "$dir"gtk-2.0/menubar-toolbar/ -type f -exec sed -i s/"color_$i"/"$(get_colors $i)"/g {} \;
-		find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_$i"/"$(get_colors $i)"/g {} \;
+		find "$dir" -type f -not -ipath "*.png" -exec sed -i s/"color_$i"/"${colors[$i]}"/g {} \;
+		# find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_$i"/"${colors[$i]}"/g {} \;
+		# find "$dir"gtk-2.0/menubar-toolbar/ -type f -exec sed -i s/"color_$i"/"${colors[$i]}"/g {} \;
+		# find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_$i"/"${colors[$i]}"/g {} \;
 	done
 }
 
@@ -85,8 +95,7 @@ apply_theme(){
 	xfconf-query -c xfwm4 -p /general/theme -s "warna"
 	xfconf-query -c xsettings -p /Net/ThemeName -s "adwaita"
 	xfconf-query -c xsettings -p /Net/ThemeName -s "warna"
-	echo "Done"
-	notify-send "Done changing theme :)"
+	# notify-send "Done changing theme :)"
 }
 
 show_help(){
@@ -100,6 +109,7 @@ show_help(){
 	--xfwm    | -xf   Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar | 365 | vela ]
 	--openbox | -ob   Choose openbox theme from list [ pelangi | tricky | large-tb | mek-oes ]
 	--tint2   | -t    Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark | floaty-rounded | floaty | slim-float | minima-rounded ]
+	--norender| -n    Used with --gtk to stop it from rendering assets
 	--help    | -h    Show help
 
 	EOF
@@ -122,6 +132,7 @@ while [[ "$#" -gt 0 ]]; do
 				wal=1
 				file=$HOME/.cache/wal/colors.Xresources
 			fi
+			load_colors $file
 			;;
 		--xcolor | -xc )
 			if [[ -z $2 ]]; then
@@ -136,6 +147,7 @@ while [[ "$#" -gt 0 ]]; do
 				#arr[${#arr[@]}]="xcolor"
 				shift
 			fi
+			load_colors $file
 			;;
         --gtk | -g )
 			if [[ -z $2 ]]; then
@@ -143,7 +155,7 @@ while [[ "$#" -gt 0 ]]; do
 				exit 1
 			elif [[ $2 = fantome ]]; then
 				gtk=$2
-				#echo $gtk
+				# echo $gtk
 				#$(gtk_themer $gtk)
 				arr[${#arr[@]}]="gtk"
 				shift
@@ -151,6 +163,9 @@ while [[ "$#" -gt 0 ]]; do
 				show_help |grep gtk
 				exit 1
 			fi			
+			;;
+		--norender | -n )
+			skip_render=true
 			;;
 		--openbox | -ob )
 			if [[ -z $2 ]]; then
@@ -213,22 +228,25 @@ main() {
 		mkdir $HOME/.themes/warna
 	fi
 	echo "Generating theme ..."
-	fill_color
+	# fill_color
 	#for i in {1..8}; do
-	#	echo $(get_colors $i)
+	#	echo ${colors[$i]}
 	#done
 	i=0
 	while [ $i -lt ${#arr[@]} ]; do
 		case ${arr[$i]} in
 			gtk )
-				#echo "$gtk"
-				$(gtk_themer $gtk)
-				pushd "$dir"gtk-2.0/
-				python3 "$dir"gtk-2.0/render-assets.py
-				popd
-				pushd "$dir"gtk-3.0/
-				python3 "$dir"gtk-3.0/render-assets.py
-				popd
+				# echo "$gtk"
+				gtk_themer $gtk
+				if [ $skip_render = false ] ;
+				then
+					pushd "$dir"gtk-2.0/
+					python3 "$dir"gtk-2.0/render-assets.py
+					popd
+					pushd "$dir"gtk-3.0/
+					python3 "$dir"gtk-3.0/render-assets.py
+					popd
+				fi
 				;;
 			tint2 )
 				#echo "$tint2"
