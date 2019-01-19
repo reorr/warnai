@@ -54,7 +54,6 @@ handle-v
 inline-toolbar
 line-h
 line-v
-listasset.txt
 menu-arrow
 menu-arrow-prelight
 menubar_button
