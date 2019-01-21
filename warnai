@@ -8,10 +8,10 @@ skip_render=false
 pushd $(dirname $(readlink -f $0)) >/dev/null 2>&1
 
 # fill_color(){
-#         get_colors(){
-#                 grep "color$1 *:" $file | awk -F\# '{print $2}' | head -1
-#         }
-#         get_colors_bg=`grep "background *:" $file | awk -F\# '{print $2}' | head -1`
+#     get_colors(){
+#         grep "color$1 *:" $file | awk -F\# '{print $2}' | head -1
+#     }
+#     get_colors_bg=`grep "background *:" $file | awk -F\# '{print $2}' | head -1`
 # }
 
 load_colors(){
@@ -23,7 +23,7 @@ load_colors(){
 
 xfwm_themer(){
 	if [ ! -d "$dir"xfwm4/ ]; then
-	    mkdir -p "$dir"xfwm4/
+	  mkdir -p "$dir"xfwm4/
 	else
 		rm "$dir"xfwm4/*
 	fi	
@@ -41,7 +41,7 @@ xfwm_themer(){
 
 ob_themer(){
 	if [ ! -d "$dir"openbox-3/ ]; then
-	    mkdir -p "$dir"openbox-3/
+	  mkdir -p "$dir"openbox-3/
 	else
 		rm "$dir"openbox-3/*
 	fi	
@@ -95,7 +95,7 @@ apply_theme(){
 	xfconf-query -c xfwm4 -p /general/theme -s "warna"
 	xfconf-query -c xsettings -p /Net/ThemeName -s "adwaita"
 	xfconf-query -c xsettings -p /Net/ThemeName -s "warna"
-	# notify-send "Done changing theme :)"
+	notify-send "Done changing theme :)"
 }
 
 show_help(){
@@ -103,14 +103,14 @@ show_help(){
 	Usage : warnai [options #parameter]
 
 	Avaible options
-	--wal     | -w    Generate color from pywal cache
-	--xcolor  | -xc   Generate color from custom .Xresources file
-	--gtk     | -g    Choose gtk theme from list [ fantome ]
-	--xfwm    | -xf   Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar | 365 | vela ]
-	--openbox | -ob   Choose openbox theme from list [ pelangi | tricky | large-tb | mek-oes ]
-	--tint2   | -t    Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark | floaty-rounded | floaty | slim-float | minima-rounded ]
-	--norender| -n    Used with --gtk to stop it from rendering assets
-	--help    | -h    Show help
+	--wal   | -w  Generate color from pywal cache
+	--xcolor | -xc  Generate color from custom .Xresources file
+	--gtk   | -g  Choose gtk theme from list [ fantome ]
+	--xfwm  | -xf  Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar | 365 | vela ]
+	--openbox | -ob  Choose openbox theme from list [ pelangi | tricky | large-tb | mek-oes ]
+	--tint2  | -t  Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark | floaty-rounded | floaty | slim-float | minima-rounded ]
+	--norender| -n  Used with --gtk to stop it from rendering assets
+	--help  | -h  Show help
 
 	EOF
 }
@@ -120,8 +120,8 @@ if [[ $# -eq 0 ]]; then
 fi
 
 while [[ "$#" -gt 0 ]]; do
-    case $1 in
-        --wal | -w )
+  case $1 in
+    --wal | -w )
 			if [[ -n $xcolor ]]; then
 				file=$xcolor
 			elif [[ ! -e $HOME/.cache/wal/colors.Xresources ]]; then
@@ -149,7 +149,7 @@ while [[ "$#" -gt 0 ]]; do
 			fi
 			load_colors $file
 			;;
-        --gtk | -g )
+    --gtk | -g )
 			if [[ -z $2 ]]; then
 				echo "Please specify the gtk theme"
 				exit 1
@@ -212,15 +212,15 @@ while [[ "$#" -gt 0 ]]; do
 				exit 1
 			fi
 			;;
-        --help | -h )
+    --help | -h )
 			show_help
-            exit
-            ;;
-        * )
+      exit
+      ;;
+    * )
 			show_help
-            exit 1
-    esac
-    shift
+      exit 1
+  esac
+  shift
 done
 
 main() {
