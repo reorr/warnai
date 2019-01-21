@@ -24,8 +24,9 @@ Avaible options
 --xcolor  | -xc   Generate color from custom .Xresources file
 --gtk     | -g    Choose gtk theme from list [ fantome ]
 --xfwm    | -xf   Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar | 365 | vela ]
---openbox | -ob   Choose openbox theme from list [ pelangi | tricky | large-tb | mek-oes ]
+--openbox | -ob   Choose openbox theme from list [ pelangi | tricky | mek-oes | small-tb | medium-tb | large-tb | small-border | medium-border ]
 --tint2   | -t    Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark | floaty-rounded | floaty | slim-float ]
+--norender| -n    Used with --gtk to stop it from rendering assets
 --help    | -h    Show help
 </pre>
 
