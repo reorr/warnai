@@ -13,7 +13,7 @@ from multiprocessing import Pool
 
 
 def run_inkscape(obj_id):
-    print('running on {}'.format(obj_id))
+    print('rendering {}'.format(obj_id))
     subprocess.call(['/usr/bin/inkscape',
                      '--export-id={}'.format(obj_id),
                      '--export-id-only',
