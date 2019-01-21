@@ -6,6 +6,8 @@
 
 ## Dependencies
 - Inkscape (to render assets in gtk theme)
+- optipng
+- python3
 
 ## Usage
 <pre>
