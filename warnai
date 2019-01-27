@@ -107,7 +107,7 @@ show_help(){
 	--xcolor | -xc  Generate color from custom .Xresources file
 	--gtk   | -g  Choose gtk theme from list [ fantome ]
 	--xfwm  | -xf  Choose xfwm4 theme from list [ pastel | black-paha | one_new | nest1 | diamondo | wendows | tetris | ribbon | just-title-bar | 365 | vela ]
-	--openbox | -ob   Choose openbox theme from list [ pelangi | tricky | mek-oes | small-tb | medium-tb | large-tb | small-border | medium-border | slight ]
+	--openbox | -ob   Choose openbox theme from list [ pelangi | tricky | mek-oes | small-tb | medium-tb | large-tb | small-border | medium-border | slight | slight-medium ]
 	--tint2  | -t  Choose tint2 theme from list [ chromeos | chromeos-tinted | chromeos-pelangi | slim-text-dark | slim-text-tinted | slim-text-tinted-dark | floaty-rounded | floaty | slim-float | minima-rounded ]
 	--norender| -n  Used with --gtk to stop it from rendering assets
 	--help  | -h  Show help
@@ -171,7 +171,7 @@ while [[ "$#" -gt 0 ]]; do
 			if [[ -z $2 ]]; then
 				echo "Please specify the openbox theme"
 				exit 1
-			elif [[ "$2" = "pelangi" || "$2" = "tricky" || "$2" = "large-tb" || "$2" == "medium-tb" || "$2" == "small-tb" || "$2" == "medium-border" || "$2" == "small-border" || "$2" == "mek-oes" || "$2" == "slight" ]]; then
+			elif [[ "$2" = "pelangi" || "$2" = "tricky" || "$2" = "large-tb" || "$2" == "medium-tb" || "$2" == "small-tb" || "$2" == "medium-border" || "$2" == "small-border" || "$2" == "mek-oes" || "$2" == "slight" || "$2" == "slight-medium" ]]; then
 				openbox=$2
 				#echo $openbox
 				#$(ob_themer $openbox)
