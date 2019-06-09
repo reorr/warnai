@@ -725,7 +725,7 @@ modelbutton.flat {
   border-radius: 2px; }
   menuitem.button.flat:hover,
   modelbutton.flat:hover {
-    background-color: #484c59; }
+    background-color: #color_2; }
   menuitem.button.flat:checked,
   modelbutton.flat:checked {
     color: #color_7; }
@@ -1758,7 +1758,7 @@ notebook {
           color: #color_2; }
 
 scrollbar {
-  background-color: #3e434f;
+  background-color: #color_bg;
   transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   * {
     -GtkScrollbar-has-backward-stepper: false;
@@ -2415,7 +2415,7 @@ scrolledwindow undershoot.right {
 scrolledwindow junction {
   border-color: transparent;
   border-image: linear-gradient(to bottom, #color_bg 1px, transparent 1px) 0 0 0 1/0 1px stretch;
-  background-color: #3e434f; }
+  background-color: #color_bg; }
   scrolledwindow junction:dir(rtl) {
     border-image-slice: 0 1 0 0; }
 
