@@ -156,7 +156,7 @@ entry {
   entry:disabled {
     color: #color_8;
     border-color: #color_bg;
-    background-color: rgba(64, 69, 82, 0.55); }
+    background-color: rgba(64, 69, 82, 0.2); }
   entry.warning {
     color: white;
     border-color: #color_bg;
