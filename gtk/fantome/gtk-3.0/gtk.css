@@ -201,13 +201,13 @@ entry {
     box-shadow: none; }
   .osd entry {
     color: #color_7;
-    border-color: rgba(26, 28, 34, 0.35);
-    background-color: rgba(102, 109, 132, 0.35); }
+    border-color: #color_2;
+    background-color: #color_bg; }
     .osd entry image, .osd entry image:hover {
       color: inherit; }
     .osd entry:focus {
       color: #color_7;
-      border-color: rgba(26, 28, 34, 0.35);
+      border-color: #color_2;
       background-color: #color_2; }
     .osd entry:disabled {
       color: rgba(186, 195, 207, 0.55);
@@ -331,28 +331,28 @@ button {
       color: #color_2; }
     button.osd:active, button.osd:checked {
       color: #color_7;
-      border-color: rgba(26, 28, 34, 0.35);
+      border-color: #color_2;
       background-color: #color_2; }
     button.osd:disabled {
       color: #5d626e;
-      border-color: rgba(26, 28, 34, 0.35);
+      border-color: #color_2;
       background-color: rgba(102, 109, 132, 0.2); }
   .osd button {
     color: #color_7;
-    border-color: rgba(26, 28, 34, 0.35);
-    background-color: rgba(102, 109, 132, 0.35); }
+    border-color: #color_2;
+    background-color: #color_bg; }
     .osd button:hover {
       color: #color_7;
-      border-color: rgba(26, 28, 34, 0.35);
-      background-color: rgba(119, 127, 151, 0.45); }
+      border-color: #color_2;
+      background-color: #color_2; }
     .osd button:active, .osd button:checked {
       background-clip: padding-box;
       color: #color_7;
-      border-color: rgba(26, 28, 34, 0.35);
+      border-color: #color_2;
       background-color: #color_2; }
     .osd button:disabled {
       color: #5d626e;
-      border-color: rgba(26, 28, 34, 0.35);
+      border-color: #color_2;
       background-color: rgba(102, 109, 132, 0.2); }
     .osd button.flat, .osd button.sidebar-button {
       border-color: transparent;
@@ -361,16 +361,16 @@ button {
       box-shadow: none; }
       .osd button.flat:hover, .osd button.sidebar-button:hover {
         color: #color_7;
-        border-color: rgba(26, 28, 34, 0.35);
-        background-color: rgba(119, 127, 151, 0.45); }
+        border-color: #color_2;
+        background-color: #color_2; }
       .osd button.flat:disabled, .osd button.sidebar-button:disabled {
         color: #5d626e;
-        border-color: rgba(26, 28, 34, 0.35);
+        border-color: #color_2;
         background-color: rgba(102, 109, 132, 0.2);
         background-image: none; }
       .osd button.flat:active, .osd button.sidebar-button:active, .osd button.flat:checked, .osd button.sidebar-button:checked {
         color: #color_7;
-        border-color: rgba(26, 28, 34, 0.35);
+        border-color: #color_2;
         background-color: #color_2; }
   .osd .linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active):not(:only-child),
   .osd .linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active) + button:not(:checked):not(:active) {
@@ -809,7 +809,7 @@ spinbutton:not(.vertical) > entry:drop(active) + button {
 
 .osd spinbutton:not(.vertical) > button:hover:not(:active),
 .osd spinbutton:not(.vertical) > button:hover + button {
-  box-shadow: inset 1px 0 rgba(26, 28, 34, 0.35); }
+  box-shadow: inset 1px 0 #color_2; }
 
 .osd spinbutton:not(.vertical) > button:first-child:hover:not(:active),
 .osd spinbutton:not(.vertical) > button.up:dir(rtl):hover:not(:active),
@@ -817,7 +817,7 @@ spinbutton:not(.vertical) > entry:drop(active) + button {
   box-shadow: none; }
 
 .osd spinbutton:not(.vertical) > entry:focus + button {
-  border-left-color: rgba(26, 28, 34, 0.35); }
+  border-left-color: #color_2; }
 
 spinbutton.vertical button, spinbutton.vertical entry {
   padding-left: 4px;
@@ -1133,7 +1133,7 @@ window.csd > .titlebar:not(headerbar):backdrop {
   border-color: #color_bg;
   background-color: #color_bg; }
   .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, .primary-toolbar .linked:not(.vertical).path-bar > button:hover, headerbar .linked:not(.vertical).path-bar > button:hover {
-    background-color: rgba(134, 144, 165, 0.37); }
+    background-color: #color_2; }
   .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, .primary-toolbar .linked:not(.vertical).path-bar > button:active, headerbar .linked:not(.vertical).path-bar > button:active, .primary-toolbar .linked:not(.vertical).path-bar > button:checked, headerbar .linked:not(.vertical).path-bar > button:checked {
     color: #color_7;
     border-color: transparent;
@@ -1260,7 +1260,7 @@ window.csd > .titlebar:not(headerbar):backdrop {
   background-color: #color_bg; }
 
 .primary-toolbar spinbutton:not(.vertical) button:hover, headerbar spinbutton:not(.vertical) button:hover {
-  background-color: rgba(134, 144, 165, 0.37); }
+  background-color: #color_2; }
 
 .primary-toolbar spinbutton:not(.vertical) button:active, headerbar spinbutton:not(.vertical) button:active, .primary-toolbar spinbutton:not(.vertical) button:checked, headerbar spinbutton:not(.vertical) button:checked {
   color: #color_7;
@@ -1741,7 +1741,7 @@ notebook {
       background-color: rgba(64, 69, 82, 0); }
       notebook > header > tabs > tab:hover:not(:checked) {
         color: #color_8;
-        background-color: rgba(64, 69, 82, 0.5);
+        background-color: #color_2;
         border-color: #color_bg; }
       notebook > header > tabs > tab:checked {
         color: #color_7;
@@ -2458,27 +2458,28 @@ row.activatable:selected.has-open-popup, row.activatable:selected:hover {
   border-radius: 0 0 2px 2px;
   border-width: 0 1px 1px 1px;
   border-style: solid;
-  border-color: rgba(31, 33, 40, 0.95); }
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35); }
   .app-notification border {
     border: none; }
   .app-notification button {
     color: #color_7;
-    border-color: rgba(26, 28, 34, 0.35);
-    background-color: rgba(102, 109, 132, 0.35); }
+    border-color: #color_2;
+    background-color: #color_bg; }
     .app-notification button.flat, .app-notification button.sidebar-button {
       border-color: rgba(82, 148, 226, 0); }
     .app-notification button:hover {
       color: #color_7;
-      border-color: rgba(26, 28, 34, 0.35);
-      background-color: rgba(119, 127, 151, 0.45); }
+      border-color: #color_2;
+      background-color: #color_2; }
     .app-notification button:active, .app-notification button:checked {
       color: #color_7;
-      border-color: rgba(26, 28, 34, 0.35);
+      border-color: #color_2;
       background-color: #color_2;
       background-clip: padding-box; }
     .app-notification button:disabled {
       color: #5d626e;
-      border-color: rgba(26, 28, 34, 0.35);
+      border-color: #color_2;
       background-color: rgba(102, 109, 132, 0.2); }
 
 expander arrow {
@@ -3115,7 +3116,7 @@ popover.background label.nautilus-canvas-item.separator, headerbar .nautilus-can
   .nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:not(:last-child):not(:only-child) {
     margin: 0 0 1px 0; }
   .nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:hover {
-    background-color: rgba(134, 144, 165, 0.37); }
+    background-color: #color_2; }
   .nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:active, .nemo-window .primary-toolbar widget.raised.linked:not(.vertical):not(.path-bar) > button:checked {
     color: #color_7;
     border-color: transparent;
@@ -3999,19 +4000,19 @@ GtkListBox .h4 {
 
 #buttonbox_frame button {
   color: #color_7;
-  border-color: rgba(26, 28, 34, 0.35);
-  background-color: rgba(102, 109, 132, 0.35); }
+  border-color: #color_2;
+  background-color: #color_bg; }
   #buttonbox_frame button:hover {
     color: #color_7;
-    border-color: rgba(26, 28, 34, 0.35);
-    background-color: rgba(119, 127, 151, 0.45); }
+    border-color: #color_2;
+    background-color: #color_2; }
   #buttonbox_frame button:active, #buttonbox_frame button:checked {
     color: #color_7;
-    border-color: rgba(26, 28, 34, 0.35);
+    border-color: #color_2;
     background-color: #color_2; }
   #buttonbox_frame button:disabled {
     color: #5d626e;
-    border-color: rgba(26, 28, 34, 0.35);
+    border-color: #color_2;
     background-color: rgba(102, 109, 132, 0.2); }
 
 #login_window #user_combobox {
@@ -4102,8 +4103,8 @@ filechooser placessidebar.sidebar,
       filechooser placessidebar.sidebar row.sidebar-row:not(:selected) button.sidebar-button:hover,
       .nautilus-window placessidebar.sidebar row.sidebar-row:not(:selected) button.sidebar-button:hover {
         color: #color_7;
-        border-color: rgba(26, 28, 34, 0.35);
-        background-color: rgba(119, 127, 151, 0.45); }
+        border-color: #color_2;
+        background-color: #color_2; }
       filechooser placessidebar.sidebar row.sidebar-row:not(:selected) button.sidebar-button:active,
       .nautilus-window placessidebar.sidebar row.sidebar-row:not(:selected) button.sidebar-button:active {
         color: #color_7;
@@ -4210,30 +4211,30 @@ filechooser actionbar {
 
 filechooser actionbar button {
   color: #color_7;
-  border-color: rgba(26, 28, 34, 0.35);
-  background-color: rgba(102, 109, 132, 0.35); }
+  border-color: #color_2;
+  background-color: #color_bg; }
   .caja-side-pane > box button:hover:not(:active), filechooser actionbar button:hover {
     color: #color_7;
-    border-color: rgba(26, 28, 34, 0.35);
-    background-color: rgba(119, 127, 151, 0.45); }
+    border-color: #color_2;
+    background-color: #color_2; }
   filechooser actionbar button:active, filechooser actionbar button:checked {
     color: #color_7;
-    border-color: rgba(26, 28, 34, 0.35);
+    border-color: #color_2;
     background-color: #color_2; }
   filechooser actionbar button:disabled {
     color: #5d626e;
-    border-color: rgba(26, 28, 34, 0.35);
+    border-color: #color_2;
     background-color: rgba(102, 109, 132, 0.2); }
 
 filechooser actionbar entry {
   color: #color_7;
-  border-color: rgba(26, 28, 34, 0.35);
-  background-color: rgba(102, 109, 132, 0.35); }
+  border-color: #color_2;
+  background-color: #color_bg; }
   filechooser actionbar entry image, filechooser actionbar entry image:hover {
     color: inherit; }
   filechooser actionbar entry:focus {
     color: #color_7;
-    border-color: rgba(26, 28, 34, 0.35);
+    border-color: #color_2;
     background-color: #color_2; }
   filechooser actionbar entry:disabled {
     color: rgba(186, 195, 207, 0.55);

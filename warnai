@@ -74,7 +74,7 @@ tint_themer(){
 }
 
 gtk_themer(){
-	rm -rf "$dir"gtk-*
+	# rm -rf "$dir"gtk-*
 	cp -r gtk/$1/* "$dir"
 	find "$dir" -type f -not -ipath "*.png" -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
 	# find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
