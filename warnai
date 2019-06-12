@@ -7,13 +7,6 @@ arr=()
 skip_render=false
 pushd $(dirname $(readlink -f $0)) >/dev/null 2>&1
 
-# fill_color(){
-#     get_colors(){
-#         grep "color$1 *:" $file | awk -F\# '{print $2}' | head -1
-#     }
-#     get_colors_bg=`grep "background *:" $file | awk -F\# '{print $2}' | head -1`
-# }
-
 load_colors(){
 	colors[bg]=$(grep "background:" $1 | awk -F\# '{print $2}' | head -1)
 	for i in {1..8}; do
@@ -74,18 +67,11 @@ tint_themer(){
 }
 
 gtk_themer(){
-	# rm -rf "$dir"gtk-*
 	cp -r gtk/$1/* "$dir"
 	find "$dir" -type f -not -ipath "*.png" -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
-	# find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
-	# find "$dir"gtk-2.0/menubar-toolbar/ -type f -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
-	# find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_bg"/"${colors[bg]}"/g {} \;
 
 	for i in {1..8}; do
 		find "$dir" -type f -not -ipath "*.png" -exec sed -i s/"color_$i"/"${colors[$i]}"/g {} \;
-		# find "$dir"gtk-2.0/ -type f -exec sed -i s/"color_$i"/"${colors[$i]}"/g {} \;
-		# find "$dir"gtk-2.0/menubar-toolbar/ -type f -exec sed -i s/"color_$i"/"${colors[$i]}"/g {} \;
-		# find "$dir"gtk-3.0/ -type f -exec sed -i s/"color_$i"/"${colors[$i]}"/g {} \;
 	done
 }
 
@@ -144,7 +130,6 @@ while [[ "$#" -gt 0 ]]; do
 			else
 				xcolor=$2
 				file=$xcolor
-				#arr[${#arr[@]}]="xcolor"
 				shift
 			fi
 			load_colors $file
@@ -155,8 +140,6 @@ while [[ "$#" -gt 0 ]]; do
 				exit 1
 			elif [[ $2 = fantome ]]; then
 				gtk=$2
-				# echo $gtk
-				#$(gtk_themer $gtk)
 				arr[${#arr[@]}]="gtk"
 				shift
 			else
@@ -173,8 +156,6 @@ while [[ "$#" -gt 0 ]]; do
 				exit 1
 			elif [[ "$2" = "pelangi" || "$2" = "tricky" || "$2" = "large-tb" || "$2" == "medium-tb" || "$2" == "small-tb" || "$2" == "medium-border" || "$2" == "small-border" || "$2" == "mek-oes" || "$2" == "slight" || "$2" == "slight-medium" ]]; then
 				openbox=$2
-				#echo $openbox
-				#$(ob_themer $openbox)
 				arr[${#arr[@]}]="openbox"
 				shift
 			else
@@ -188,8 +169,6 @@ while [[ "$#" -gt 0 ]]; do
 				exit 1
 			elif [[ "$2" = "pastel" || "$2" = "black-paha" || "$2" = "one_new" || "$2" = "nest1" || "$2" = "diamondo" || "$2" = "wendows" || "$2" = "tetris" || "$2" = "ribbon" || "$2" = "just-title-bar" || "$2" = "365" || "$2" = "vela" ]]; then
 				xfwm=$2
-				#echo $xfwm
-				#$(xfwm_themer $xfwm)
 				arr[${#arr[@]}]="xfwm"
 				shift
 			else
@@ -203,8 +182,6 @@ while [[ "$#" -gt 0 ]]; do
 				exit 1
 			elif [[ "$2" = "chromeos" || "$2" = "chromeos-tinted" || "$2" = "chromeos-pelangi" || "$2" = "slim-text-dark" || "$2" = "slim-text-tinted" || "$2" = "slim-text-tinted-dark" || "$2" = "floaty-rounded" || "$2" = "floaty" || "$2" = "slim-float" || "$2" = "minima-rounded" || "$2" = "squared-full"  || "$2" = "less-is-more" ]]; then
 				tint2=$2
-				#echo $tint2
-				#$(tint_themer $tint2)
 				arr[${#arr[@]}]="tint2"
 				shift
 			else
@@ -228,15 +205,10 @@ main() {
 		mkdir $HOME/.themes/warna
 	fi
 	echo "Generating theme ..."
-	# fill_color
-	#for i in {1..8}; do
-	#	echo ${colors[$i]}
-	#done
 	i=0
 	while [ $i -lt ${#arr[@]} ]; do
 		case ${arr[$i]} in
 			gtk )
-				# echo "$gtk"
 				gtk_themer $gtk
 				if [ $skip_render = false ] ;
 				then
@@ -249,15 +221,12 @@ main() {
 				fi
 				;;
 			tint2 )
-				#echo "$tint2"
 				$(tint_themer $tint2)
 				;;
 			xfwm )
-				#echo "$xfwm"
 				$(xfwm_themer $xfwm)
 				;;			
 			openbox )
-				#echo "$openbox"
 				$(ob_themer $openbox)
 				;;
 		esac
