@@ -1034,7 +1034,7 @@ window.csd > .titlebar:not(headerbar):backdrop {
   min-height: 1px;
   background: none;
   border-width: 0 1px;
-  border-image: #color_bg 0 1/0 1px stretch; }
+ /* border-image: #color_bg 0 1/0 1px stretch; */}
   .primary-toolbar:not(.libreoffice-toolbar) separator:backdrop, headerbar separator.titlebutton:backdrop, .titlebar:not(headerbar) separator.titlebutton:backdrop {
     opacity: 0.6; }
 
@@ -3543,7 +3543,7 @@ panel-toplevel.background button:not(#tasklist-button), .xfce4-panel.panel butto
   panel-toplevel.background button:hover:not(#tasklist-button), .xfce4-panel.panel button.flat:hover, .xfce4-panel.panel button.sidebar-button:hover {
     color: #color_bg;
     border: none;
-    background-color: #color_2;
+    background-color: #color_2; }
   .mate-panel-menu-bar button:active:not(#tasklist-button),
   panel-toplevel.background button:active:not(#tasklist-button), .xfce4-panel.panel button.flat:active, .xfce4-panel.panel button.sidebar-button:active, .mate-panel-menu-bar button:checked:not(#tasklist-button),
   panel-toplevel.background button:checked:not(#tasklist-button), .xfce4-panel.panel button.flat:checked, .xfce4-panel.panel button.sidebar-button:checked {
