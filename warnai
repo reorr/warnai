@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dir=$HOME/.themes/warna/
 conf=$HOME/.config/

@@ -1,6 +1,6 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-w=$(xprop -root -notype _NET_CURRENT_DESKTOP | grep -o [0-9])
+w=$(xprop -root -notype _NET_CURRENT_DESKTOP | grep -o '[0-9]')
 case "$w" in
     "0")  echo -e "\uf111 \u00b7 \u00b7 \u00b7 \u00b7 \u00b7 \u00b7 \u00b7 \u00b7 \u00b7" ;;
     "1")  echo -e "\u00b7 \uf111 \u00b7 \u00b7 \u00b7 \u00b7 \u00b7 \u00b7 \u00b7 \u00b7" ;;
